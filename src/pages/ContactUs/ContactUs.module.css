@@ -1,0 +1,45 @@
+/* ContactUs.module.css */
+
+.formContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10rem;
+}
+
+.formContainer label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formContainer textarea {
+  resize: vertical;
+}
+
+.formContainer input[type="submit"] {
+  background-color: rgb(97, 97, 168);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formContainer input[type="submit"]:hover {
+  background-color: blue;
+}

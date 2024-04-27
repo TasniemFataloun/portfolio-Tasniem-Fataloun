@@ -1,0 +1,35 @@
+/* IdeeTwee.module.css */
+
+* {
+  background-color: #f0f0f0;
+}
+
+.firstSection {
+  background-color: #f0f0f0;
+  padding: 7rem 0;
+  text-align: center;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 75rem;
+  margin: auto;
+}
+
+.text {
+  max-width: 30rem;
+  margin-top: 7rem;
+  z-index: 2;
+}
+
+.image {
+  background-image: url("../../../photo.png");
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  height: 40rem;
+}

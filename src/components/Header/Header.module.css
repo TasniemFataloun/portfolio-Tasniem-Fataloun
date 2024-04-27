@@ -1,0 +1,38 @@
+
+h1 {
+  font-size: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 99vw;
+  align-items: center;
+  border-bottom: 1px solid #242424;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: white;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+}

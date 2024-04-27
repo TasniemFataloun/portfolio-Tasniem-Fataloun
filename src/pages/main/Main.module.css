@@ -1,0 +1,126 @@
+* {
+  margin: 0 auto;
+  font-family: "Kode Mono", monospace;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: brown;
+}
+header {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  padding-right: 1rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.typingAnimation {
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+h2 {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 0.9rem;
+}
+
+h3 a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+
+h3 a:hover {
+  color: black;
+}
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 109%;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
