@@ -1,8 +1,21 @@
 /* ContactUs.module.css */
 
+.contactContainer {
+  width: 100%;
+  border: 2px red solid;
+  height: 100vh;
+}
+
+.contactContainer h1{
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
 .formContainer {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 34rem;
+  margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;

@@ -1,9 +1,10 @@
-import { delay, motion } from "framer-motion";
+import {  color, motion } from "framer-motion";
 import styles from "./Links.module.css";
 
 const itemVariants = {
   open: {
-    x: 0, 
+    color: "#f0f0f0", 
+    x: "-250%", 
     delay: 1,
     opacity: 1,
     transition: {
@@ -24,7 +25,6 @@ const linksAnimation = {
   open: {
     duration: 1,
     delay: 0.5,
-    x: 5,
     visibility: "visible",
     transition: {
       duration: 1,
@@ -42,18 +42,19 @@ const linksAnimation = {
 }
 };
 
-const Links = ({ isOpen }) => {
+const Links = ({ isOpen, closeSidebar }) => {
   const items = ["Home", "About", "Contact"];
   return (
-    <motion.div className={styles.links} variants={linksAnimation} animate={isOpen ? "open" : "closed"}>
-      <motion.div className={styles.try} variants={itemVariants} >
+    <motion.div className={styles.links} variants={itemVariants} animate={isOpen ? "open" : "closed"}>
+      <motion.div className={styles.try} variants={linksAnimation} >
         {isOpen && items.map((item) => (
           <motion.a
             href={`#${item}`}
             key={item}
             variants={itemVariants}
-            whileHover={{ scale: 1.4, color: "red" }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.4, color: "black"}}
+            whileTap={{ scale: 0.80 }}
+            onClick={closeSidebar}
           >
             {item}
           </motion.a>

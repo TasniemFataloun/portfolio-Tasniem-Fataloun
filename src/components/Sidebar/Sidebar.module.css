@@ -14,10 +14,10 @@ button {
 
 .bg{
     position: absolute;
-    width: 30%;
+    width: 80%;
     height: 100%;
-    background-color: rgb(19, 103, 127);
-    z-index: 1;
+    background-color: #606887;
+    z-index:3;
     right: 0;
     transform: rotate(-180deg);
 }
