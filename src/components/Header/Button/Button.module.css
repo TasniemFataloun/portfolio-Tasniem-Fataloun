@@ -1,30 +1,27 @@
 .container {
-    display: inline-block;
+  display: inline-block;
 }
 
 .button {
-    width: 5rem; 
-    height: 10%; /* Initial height for the circle */
-    border-radius: 50%; /* Make it a circle */
-    background-color: #007bff; /* Example color, you can change this */
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    
+  width: 5rem;
+  height: 10%; /* Initial height for the circle */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #007bff; /* Example color, you can change this */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .active {
-    width: 200px; 
-    height: 100vh; 
+  width: 200px;
+  height: 100vh;
 }
 
 .inactive {
-
 }

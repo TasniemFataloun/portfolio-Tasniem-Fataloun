@@ -1,37 +1,44 @@
-import React, { useState } from 'react';
-import style from './Button.module.css';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const Button = () => {
-    const [isActive, setIsActive] = useState(false);
+const Button = ({ setOpen }) => {
+    
+  return (
+    <button onClick={() => setOpen((prev) => !prev)}>
+      <svg width="23" height="23" viewBox="0 0 23 23">
 
-    // Define variants for Framer Motion animation
-    const buttonVariant = {
-        active: {
-            color: '#fff',
-            scale: 1.2,
-            borderRadius: '0%',
-        },
-        inactive: {
-            scale: 1,
-            rotate: 0,
-            borderRadius: '50%',
+        <motion.path
+          strokeWidth="2"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" },
+          }}
+        />
+        
+        <motion.path
+          strokeWidth="2"
+          stroke="black"
+          strokeLinecap="round"
+          d="M 2 9.423 L 20 9.423"
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+        />
+        <motion.path
+          strokeWidth="2"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 2 16.346 L 20 16.346" },
+            open: { d: "M 3 2.5 L 17 16.346" },
+          }}
+        />
 
-        },
-    };
-
-    return (
-        <div className={style.container}>
-            <motion.div
-                className={`${style.button} ${isActive ? style.active : style.inactive}`}
-                variants={buttonVariant} // Apply the variants
-                animate={isActive ? 'active' : 'inactive'} // Set animation based on isActive state
-                onClick={() => setIsActive(!isActive)}
-            >
-                Click me
-            </motion.div>
-        </div>
-    );
+      </svg>
+    </button>
+  );
 };
 
 export default Button;

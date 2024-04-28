@@ -19,7 +19,7 @@ function App() {
 
 {/*       <Navbar /> */}
 
-<Button />
+<Sidebar />
 
       <IdeeTwee />
 

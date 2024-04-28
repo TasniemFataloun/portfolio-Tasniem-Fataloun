@@ -1,6 +1,16 @@
-.links{
+.links {
+margin-top: 10rem;
+    z-index: 2;
+    position: absolute;
+    right: 1rem;
+    background-color: none;
+}
+
+.try {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
 }
+
+.try a{
+    color: black;
+} 

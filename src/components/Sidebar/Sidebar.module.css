@@ -4,8 +4,20 @@ button {
     height: 50px;
     border-radius: 50%;
     top: 25px;
-    left: 25px;
+    right: 25px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 3;
   }
+
+
+.bg{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(19, 103, 127);
+    z-index: 1;
+    right: 0;
+    transform: rotate(-180deg);
+}
