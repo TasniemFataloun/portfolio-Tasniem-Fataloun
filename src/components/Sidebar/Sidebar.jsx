@@ -32,16 +32,19 @@ const Sidebar = () => {
 
   const closeSidebar = () => {
     setOpen(false);
-  }
+  };
+
+
 
   return (
-    <motion.div className={styles.sidebar} animate={open ? "open" : "closed"}>
-      <motion.div className={styles.bg} variants={variants} />
-      <Button setOpen={toggle} />
-      {/* //onclick on links to close sidebar */}
-      <Links isOpen={open}  closeSidebar={closeSidebar } />
+    <>
+      <motion.div className={styles.sidebar} animate={open ? "open" : "closed"}>
+        <motion.div className={styles.bg} variants={variants} />
+        <Button setOpen={toggle} />
+        <Links isOpen={open} closeSidebar={closeSidebar} />
+      </motion.div>
 
-    </motion.div>
+    </>
   );
 };
 export default Sidebar;

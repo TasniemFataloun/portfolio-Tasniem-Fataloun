@@ -1,0 +1,96 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px green solid;
+  height: 100vh;
+  background-color: #ab8484;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 75rem;
+  height: 33rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projectImage {
+  width: 50%;
+  height: auto;
+  min-height: 33rem;
+  object-fit: cover;
+}
+
+.imageText {
+  width: 50%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageText h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.imageText p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.projectLink {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.button:focus {
+  outline: none;
+}

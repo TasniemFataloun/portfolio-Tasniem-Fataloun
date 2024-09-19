@@ -25,20 +25,42 @@ const ContactUs = () => {
   };
 
   return (
-    <div className={style.contactContainer} id="Contact">
-      <h1>Contact me!</h1>
-    <div className={style.formContainer}>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-    </div>
-    </div>
+    <section className={style.contactContainer} id="Contact">
+      <div className={style.containerTitleForm}>
+        <div className={style.titleContact}>
+          <img src="/email.png" alt="email" className={style.emailIcon} />
+          <h1>Get in touch!</h1>
+        </div>
+        <form ref={form} onSubmit={sendEmail} className={style.formContainer}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send message" />
+        </form>
+      </div>
+
+      <div className={style.extraInfo}>
+        <div className={style.info}>
+          <img src="github.png" alt="github" className={style.iconContact} />
+          <p>TasniemFataloun</p>
+        </div>
+        <div className={style.info}>
+          <img src="email.png" alt="email" className={style.iconContact} />
+          <p>tasniemfa98@gmail.com</p>
+        </div>
+        <div className={style.info}>
+          <img
+            src="linkedIn.png"
+            alt="linkedIn"
+            className={style.iconContact}
+          />
+          <p>Tasniem Fataloun</p>
+        </div>
+      </div>
+    </section>
   );
 };
 
