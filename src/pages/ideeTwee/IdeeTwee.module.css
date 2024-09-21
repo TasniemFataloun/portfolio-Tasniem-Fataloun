@@ -17,24 +17,15 @@ main {
   overflow: hidden;
 }
 
-.mainContainer {
-  position: relative;
-  z-index: 1;
-}
-
 .firstSection {
   position: relative;
   margin: 0;
   padding-top: 5rem;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: right;
   flex-direction: column;
-  text-align: center;
-  overflow: hidden; /* Ensure no overflow issues */
-
-  /* Hide the background image in the main element */
+  overflow: hidden;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
@@ -49,51 +40,53 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/3DMan.jpg");
+  background: url("/backgroundHero.png");
   background-size: cover;
-  background-position: -40% 20%; /* Move the image more to the left and bottom */
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* Flip the image horizontally */
   z-index: -1;
 }
 
 .flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  max-width: 75rem;
-  margin-top: 10%;
+  margin: 0 13%;
   padding: 10rem 0;
+  max-width: 40rem;
+  margin-top: 7%;
+  text-align: center;
 }
 
 .text {
-  max-width: 30rem;
   color: black;
-  z-index: 10;
+  transition: opacity 0.5s ease-in;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .typewriter {
-  color: black;
+  color: #4e4d81;
   font-size: 1.5rem;
   z-index: 10;
+}
+
+.description {
+  opacity: 0;
 }
 
 .cv {
   padding: 1rem;
   border-radius: 10rem;
-  background-color: #d3a5aa;
+  background-color: #d0c67c;
   color: #f0f0f0;
   z-index: 10;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .cv:hover {
-  background-color: #6a2828;
-}
-
-h1 {
-  color: black;
+  background-color: #f0f0f0;
+  color: #d0c67c;
+  transition: 0.5s ease;
 }
 
 p {

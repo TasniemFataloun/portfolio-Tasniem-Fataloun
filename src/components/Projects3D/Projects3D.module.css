@@ -1,5 +1,5 @@
 h2 {
-  color: black;
+  color: #4e4d81;
 }
 
 .projectsSection {
@@ -36,7 +36,8 @@ h2 {
 .arrow {
   cursor: pointer;
   border: 1px solid transparent;
-  background-color: hsla(0, 0%, 0%, 0.172);
+  background-color: #d0c67c;
+  color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 50%;
   font-size: 24px;
@@ -48,13 +49,13 @@ h2 {
 }
 
 .arrow:hover {
-  transform: scale(1.1);
-  background-color: hsla(0, 0%, 0%, 0.429);
+  transform: scale(1.08);
+  background-color: #bcb06d;
 }
 
 .link {
   text-decoration: underline;
-  color: inherit;
+  color: #4e4d81;
   transition: font-weight 0.3s, color 0.3s;
 }
 

@@ -9,7 +9,7 @@
 }
 
 .containerTitleForm {
-  width: 120%;
+  width: 100%;
   margin-right: 2rem;
 }
 
@@ -20,17 +20,15 @@
 
 .emailIcon {
   width: 4rem;
-  height: 100%;
   margin-right: 2rem;
-  align-self: baseline;
 }
 
 .formContainer {
   width: 100%;
   height: 70%;
-  margin: auto;
   padding: 20px;
   border-radius: 5px;
+  margin: auto; 
 }
 
 .formContainer label {
@@ -39,8 +37,7 @@
   margin-bottom: 10px;
 }
 
-.formContainer input[type="text"],
-.formContainer input[type="email"],
+.formContainer input,
 .formContainer textarea {
   width: 100%;
   padding: 10px;
@@ -55,21 +52,20 @@
 }
 
 .formContainer input[type="submit"] {
-  color: white;
+  color: #f0f0f0;
   padding: 15px 20px;
-  border: 2px rgb(97, 97, 168) solid;
   border-radius: 30rem;
   cursor: pointer;
   font-size: 16px;
-  color: black;
-  background: none;
-  position: relative;
-  margin-top: 2rem; 
+  background: #d0c67c;
+  border: none;
+  margin-top: 2rem;
 }
 
 .formContainer input[type="submit"]:hover {
-  background-color: rgb(97, 97, 168);
-  color: white;
+  background-color: #f0f0f0;
+  color: #d0c67c;
+  transition: 0.5s ease;
 }
 
 .info {
@@ -77,6 +73,7 @@
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .iconContact {
   width: 1.5rem;
   height: 1.5rem;
