@@ -67,6 +67,8 @@ main {
   color: #4e4d81;
   font-size: 1.5rem;
   z-index: 10;
+  opacity: 0;
+  
 }
 
 .description {

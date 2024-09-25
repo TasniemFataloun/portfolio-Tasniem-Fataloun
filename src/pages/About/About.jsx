@@ -10,7 +10,6 @@ const About = () => {
   const photoRef = useRef(null);
 
   useEffect(() => {
-    // GSAP animations
     gsap.from(photoContainerRef.current, {
       duration: 1,
       opacity: 0,
@@ -19,17 +18,6 @@ const About = () => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: photoContainerRef.current,
-        start: "top 80%", // Animation starts when the top of the container hits 80% of the viewport
-        toggleActions: "play none none reverse", // Play animation on scroll into view, reverse when scrolling out
-      },
-    });
-
-    gsap.from(photoRef.current, {
-      duration: 1,
-      scale: 0.8,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: photoRef.current,
         start: "top 80%",
         toggleActions: "play none none reverse",
       },
@@ -42,16 +30,6 @@ const About = () => {
       x: 0,
       scrollTrigger: {
         trigger: photoContainerRef.current,
-        start: "top 80%",
-        toggleActions: "restart none none reset",
-      },
-    });
-
-    gsap.to(photoRef.current, {
-      duration: 1,
-      scale: 1,
-      scrollTrigger: {
-        trigger: photoRef.current,
         start: "top 80%",
         toggleActions: "restart none none reset",
       },

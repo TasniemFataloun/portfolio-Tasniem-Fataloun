@@ -6,13 +6,22 @@ import gsap from "gsap";
 
 const IdeeTwee = () => {
   const descriptionRef = useRef(null);
+  const typewriterTimerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
     const revealTimer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
+
+    const typewriterGsapTimer = setTimeout(() => {
+      gsap.fromTo(
+        typewriterTimerRef.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1.5, ease: "power3.inOut" }
+      );
+    }, 2000);
+
 
     const gsapTimer = setTimeout(() => {
       gsap.fromTo(
@@ -22,14 +31,11 @@ const IdeeTwee = () => {
       );
     }, 1000);
 
-    const typewriterTimer = setTimeout(() => {
-      setOpacity(1);
-    }, 4000);
 
     return () => {
       clearTimeout(revealTimer);
       clearTimeout(gsapTimer);
-      clearTimeout(typewriterTimer);
+      clearTimeout(typewriterGsapTimer);
     };
   }, []);
 
@@ -40,10 +46,7 @@ const IdeeTwee = () => {
         <div className={style.flex}>
           <div className={`${style.text} ${isVisible ? "" : style.hidden}`}>
             <h1>Hi! I'm Tasniem Fataloun</h1>
-            <h2
-              className={style.typewriter}
-              style={{ opacity: opacity, transition: "opacity 1s ease" }}
-            >
+            <h2 className={style.typewriter} ref={typewriterTimerRef}>
               <Typewriter
                 words={[
                   "Front-end developer",
