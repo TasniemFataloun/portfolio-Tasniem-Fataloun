@@ -1,3 +1,37 @@
+.aboutSection {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.aboutSection h1 {
+  align-self: flex-start;
+}
+
+.photoContainer {
+  display: flex;
+  margin: 0 auto;
+  max-width: 75rem;
+  justify-content: center; 
+}
+
 .photo {
-  filter: drop-shadow(0 0 0.75rem rgba(192, 20, 20, 0.5));
+  width: 25rem;
+  margin-right: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: auto 0;
 }

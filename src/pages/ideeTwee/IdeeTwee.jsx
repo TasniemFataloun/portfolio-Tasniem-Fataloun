@@ -60,10 +60,10 @@ const IdeeTwee = () => {
               />
             </h2>
             <br />
-            <p ref={descriptionRef} className={style.description}>
+            <h3 ref={descriptionRef} className={style.description}>
               An enthusiastic developer constantly seeking to stay updated on
               the latest technologies.
-            </p>
+            </h3>
             <br />
             <br />
             <a className={style.cv} href="/cv/cvTasniem.pdf" download>

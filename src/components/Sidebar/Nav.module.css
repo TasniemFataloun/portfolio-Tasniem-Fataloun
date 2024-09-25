@@ -6,8 +6,16 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #4e4d81;
+  background: linear-gradient(
+    180deg,
+    rgba(103, 103, 133, 0.8) 0%,
+    /* Darker gray with slight transparency */ rgba(103, 103, 133, 0.6) 40%,
+    /* Mid-point fade with soft purple */ rgba(78, 77, 129, 0) 100%
+      /* Fully transparent at the bottom */
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
   z-index: 100;
+  transition: background 0.3s ease-in-out; /* For dynamic background changes */
 }
 
 .navbar ul {
@@ -21,7 +29,7 @@ html {
 }
 
 .navbar li a {
-  color: white;
+  color: black;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease-in-out;

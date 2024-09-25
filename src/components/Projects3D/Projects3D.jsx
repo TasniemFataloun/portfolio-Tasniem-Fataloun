@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import style from "./Projects3D.module.css";
 import { Canvas } from "@react-three/fiber";
@@ -30,6 +30,14 @@ const Projects3D = () => {
       image: "/models/texture/travelPlanner.png",
       tags: ["Typescript", "MongoDB"],
       link: "https://mobdev-1-opdracht2-tasniem-fataloun-app.onrender.com/login",
+    },
+    {
+      title: "OFFF Festival",
+      description:
+        "In this project, I attended the OFFF Festival in Barcelona, where I drew inspiration from the talks to create two 3D models using Blender. These models were integrated into a promotional webpage for one of the speakers, designed as if it were part of the official OFFF website. The project included attention to lighting, composition, and a small GSAP animation.",
+      image: "OFFF.jpg",
+      tags: ["Blender", "Threejs", "GSAP"],
+      link: "https://3-d-offf-ehdc1eihf-tasniems-projects.vercel.app/",
     },
   ];
 
@@ -79,10 +87,46 @@ const Projects3D = () => {
 
   const currentProject = projects[currentIndex];
 
+  const imageRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      textRef.current,
+      { x: "-100%", opacity: 0 },
+      {
+        x: "0%",
+        opacity: 1,
+        duration: 1.5,
+
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      imageRef.current,
+      { x: "100%", opacity: 0 },
+      {
+        x: "0%",
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section className={style.projectsSection} id="Projects">
       <div className={style.containerProject}>
-        <div className={style.infoProject}>
+        <div className={style.infoProject} ref={textRef}>
           <h1>Discover my work</h1>
           <div ref={projectDetailsRef} className={style.projectDetails}>
             <h2>{currentProject.title}</h2>
@@ -120,7 +164,7 @@ const Projects3D = () => {
           </div>
         </div>
 
-        <div className={style.containerCanvas}>
+        <div className={style.containerCanvas} ref={imageRef}>
           <Canvas>
             <ambientLight intensity={0.5} />
             <directionalLight position={[1, 1, 1]} intensity={6} />
