@@ -57,6 +57,9 @@ main {
 .text {
   color: black;
   transition: opacity 0.5s ease-in;
+  border: 2px red solid;
+  min-height: 20rem;
+  
 }
 
 .hidden {
@@ -68,7 +71,6 @@ main {
   font-size: 1.5rem;
   z-index: 10;
   opacity: 0;
-  
 }
 
 .description {
@@ -90,4 +92,3 @@ main {
   color: #d0c67c;
   transition: 0.5s ease;
 }
-
