@@ -46,7 +46,7 @@ const IdeeTwee = () => {
         <div className={style.flex}>
           <div className={`${style.text} ${isVisible ? "" : style.hidden}`}>
             <h1>Hi! I'm Tasniem Fataloun</h1>
-            <br /> <br />
+            <br />
             <h2 className={style.typewriter} ref={typewriterTimerRef}>
               <Typewriter
                 words={[

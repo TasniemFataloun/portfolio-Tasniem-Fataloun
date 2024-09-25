@@ -17,6 +17,7 @@
 .titleContact {
   display: flex;
   margin-bottom: 3rem;
+  align-items: center;
 }
 
 .emailIcon {
